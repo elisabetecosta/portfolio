@@ -13,7 +13,7 @@ function Banner() {
                         <span className="tagline">Hi! My name is Elisabete Costa.</span>
                         <h1>I’m a fullstack web developer</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, non a rem illo dolore soluta adipisci corrupti.</p>
-                        <button onClick={() => console.log("clicked")}>Let’s connect <ArrowRightCircle size={25} /></button>
+                        <a href="#connect">Let’s connect <ArrowRightCircle size={25} /></a>
                     </Col>
 
                     <Col xs={12} md={6} xl={5}>
