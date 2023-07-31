@@ -3,6 +3,7 @@ import Banner from "./components/Banner"
 import Tech from "./components/Tech"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -15,6 +16,7 @@ function App() {
       <Tech />
       <Projects />
       <Contact />
+      <Footer />
     </>
   )
 }

@@ -66,7 +66,7 @@ function NavBar() {
                     </Nav>
 
                     <span className="navbar-text">
-                        <div className="social-icon">
+                        <div className="social-icons">
                             <a href="https://github.com/elisabetecosta" target="_blank" rel="noreferrer"><img src={navIcon1} alt="Github" /></a>
                             <a href="https://www.linkedin.com/in/elisabetecosta94" target="_blank" rel="noreferrer"><img src={navIcon2} alt="LinkedIn" /></a>
                             <a href="https://www.instagram.com/elica1994" target="_blank" rel="noreferrer"><img src={navIcon3} alt="Instagram" /></a>
