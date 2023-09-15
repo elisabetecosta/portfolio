@@ -12,17 +12,23 @@ function Projects() {
         {
             title: "TinDog",
             description: "HTML, CSS, JavaScript, Bootstrap",
-            imgUrl: projImg1
+            imgUrl: projImg1,
+            githubUrl: "https://github.com/elisabetecosta/tindog-app",
+            pageUrl: "",
         },
         {
             title: "Wok This Way",
             description: "HTML, CSS, JavaScript, NodeJS, Express, MongoDB",
-            imgUrl: projImg2
+            imgUrl: projImg2,
+            githubUrl: "https://github.com/elisabetecosta/wok-this-way",
+            pageUrl: "",
         },
         {
             title: "Meowmery",
             description: "React Native",
-            imgUrl: projImg3
+            imgUrl: projImg3,
+            githubUrl: "",
+            pageUrl: "",
         },
         // {
         //     title: "",
@@ -55,10 +61,10 @@ function Projects() {
                                     <Nav.Link eventKey="first">React</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">NodeJS</Nav.Link>
+                                    <Nav.Link eventKey="second">JavaScript</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third">Vanilla JavaScript</Nav.Link>
+                                    <Nav.Link eventKey="third">HTML & CSS</Nav.Link>
                                 </Nav.Item>
                             </Nav>
 

@@ -19,11 +19,11 @@ function Tech() {
                                 <img src="https://abrudz.github.io/logos/JS.svg" alt="JavaScript Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/nodejs-1.svg" alt="NodeJS Logo" />
                                 <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDB Logo" />
-                                <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="Typescript Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React Logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="Typescript Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/mysql-logo.svg" alt="MySQL Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="Wordpress Logo" />
-                                <img src="https://cdn.worldvectorlogo.com/logos/php-1.svg" alt="PHP Logo" />
+                                <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" alt="React Native Logo" />
                             </div>
                         </div>
                     </Col>

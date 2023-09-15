@@ -12,7 +12,7 @@ function Banner() {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Hi! My name is Elisabete Costa.</span>
                         <h1>I’m a fullstack web developer</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, non a rem illo dolore soluta adipisci corrupti.</p>
+                        <p>Explore this page to find more about what I do or how to contact me.</p>
                         <a href="#connect">Let’s connect <ArrowRightCircle size={25} /></a>
                     </Col>
 

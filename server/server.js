@@ -1,24 +1,27 @@
-// make the server work
-
+// Packages needed to make the server work
+const path = require('path')
 const express = require("express")
 const router = express.Router()
 const cors = require("cors")
 const nodemailer = require("nodemailer")
+const bodyParser = require('body-parser')
+require('dotenv').config()
+
+const PORT = process.env.PORT || 5000
 
 // Server used to send emails
 const app = express()
+app.use(express.static(path.resolve(__dirname, '../build')))
 app.use(cors())
-app.use(express.json())
+app.use(bodyParser.json())
 app.use("/", router)
-app.listen(5000, () => console.log("Server Running"))
-console.log(process.env.EMAIL_USER)
-console.log(process.env.EMAIL_PASS)
+
 
 const contactEmail = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "********@gmail.com",
-        pass: ""
+        user: process.env.EMAIL_ADDRESS,
+        pass: process.env.EMAIL_PASS
     },
 })
 
@@ -30,14 +33,14 @@ contactEmail.verify((error) => {
     }
 })
 
-router.post("/contact", (req, res) => {
+router.post("/contact", bodyParser.urlencoded({ extended: false }), (req, res) => {
     const name = req.body.firstName + req.body.lastName
     const email = req.body.email
     const message = req.body.message
     const phone = req.body.phone
     const mail = {
         from: name,
-        to: "********@gmail.com",
+        to: process.env.EMAIL_ADDRESS,
         subject: "Contact Form Submission - Portfolio",
         html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
@@ -53,3 +56,9 @@ router.post("/contact", (req, res) => {
         }
     })
 })
+
+
+// 
+app.listen(PORT, () => console.log("Server Running"))
+console.log(process.env.EMAIL_USER)
+console.log(process.env.EMAIL_PASS)
