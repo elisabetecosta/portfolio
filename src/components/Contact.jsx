@@ -17,27 +17,44 @@ function Contact() {
     const [buttonText, setButtonText] = useState('Send')
     const [status, setStatus] = useState({})
 
-    const onFormUpdate = (category, value) => setFormDetails({...formDetails, [category]: value})
+    const onFormUpdate = (category, value) => setFormDetails({ ...formDetails, [category]: value })
 
     const handleSubmit = async (e) => {
 
         e.preventDefault()
         setButtonText('Sending...')
 
-        let response = await fetch("", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json;charset=utf-8"
-            },
-            body: JSON.stringify(formDetails)
-        })
+        const form = e.target
 
-        setButtonText('Send')
-        let result = response.json()
-        setFormDetails(formInitialDetails)
+        // Dynamically set the form action and method
+        form.action = "https://formsubmit.co/myemail@gmail.com"
+        form.method = "POST"
 
-        if (result.code === 200) setStatus({ success: true, message: "Message sent successfully." })
-        else setStatus({ success: false, message: "Something went wrong. Please, try again later." })
+        try {
+
+            // Send the form data using fetch
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: new FormData(form),
+            })
+
+            // Reset the form after submission
+            setFormDetails(formInitialDetails)
+            setButtonText("Send")
+
+            // Update status based on the response
+            if (response.ok) {
+              setStatus({ success: true, message: "Message sent successfully." })
+            } else {
+              setStatus({
+                success: false,
+                message: "Something went wrong. Please, try again later.",
+              })
+            }
+        } catch (error) {
+            console.error(error)
+            setStatus({ success: false, message: "Something went wrong." })
+        }
     }
 
     return (
@@ -53,23 +70,23 @@ function Contact() {
                         <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className="px-1">
-                                    <input type="text" placeholder="First Name" value={formDetails.firstName} onChange={(e) => onFormUpdate('firstName', e.target.value)} />    
+                                    <input type="text" name="firstName" placeholder="First Name" value={formDetails.firstName} onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                                 </Col>
 
                                 <Col sm={6} className="px-1">
-                                    <input type="text" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />    
+                                    <input type="text" name="lastName" placeholder="Last Name" value={formDetails.lastName} onChange={(e) => onFormUpdate('lastName', e.target.value)} />
                                 </Col>
 
                                 <Col sm={6} className="px-1">
-                                    <input type="email" placeholder="Email Address" value={formDetails.email} onChange={(e) => onFormUpdate('email', e.target.value)} />    
+                                    <input type="email" name="email" placeholder="Email Address" value={formDetails.email} onChange={(e) => onFormUpdate('email', e.target.value)} />
                                 </Col>
 
                                 <Col sm={6} className="px-1">
-                                    <input type="tel" placeholder="Phone Number" value={formDetails.phone} onChange={(e) => onFormUpdate('phone', e.target.value)} />    
+                                    <input type="tel" name="tel" placeholder="Phone Number" value={formDetails.phone} onChange={(e) => onFormUpdate('phone', e.target.value)} />
                                 </Col>
 
                                 <Col>
-                                    <textarea rows="6" placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                                    <textarea rows="6" name="message" placeholder="Message" value={formDetails.message} onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
                                     <button type="submit"><span>{buttonText}</span></button>
                                 </Col>
 

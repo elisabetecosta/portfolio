@@ -1,0 +1,1 @@
+When portfolio is ready, change email (see if it works with my main email hotmail) on action and activate formsubmit (https://formsubmit.co/)
