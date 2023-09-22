@@ -21,8 +21,8 @@ function ProjectCard({ title, description, imgUrl, githubUrl, pageUrl }) {
                     <h4>{title}</h4>
                     <span>{description}</span>
                     <div className="proj-icons">
-                        <a href={githubUrl} target="_blank" rel="noreferrer"><img src={githubIcon} alt="Github" /></a>
                         <a href={pageUrl} target="_blank" rel="noreferrer"><img src={pageIcon} alt="Visit" /></a>
+                        <a href={githubUrl} target="_blank" rel="noreferrer"><img src={githubIcon} alt="Github" /></a>
                     </div>
                 </div>
             </div>

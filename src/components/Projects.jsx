@@ -1,51 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
+import projects from "../projects"
 import ProjectCard from "./ProjectCard"
-import projImg1 from "../assets/img/project-img1.png"
-import projImg2 from "../assets/img/project-img2.png"
-import projImg3 from "../assets/img/project-img3.png"
 import backgroundImage from "../assets/img/color-sharp2.png"
 import "./Projects.css"
 
 function Projects() {
-
-    const projects = [
-        {
-            title: "TinDog",
-            description: "HTML, CSS, JavaScript, Bootstrap",
-            imgUrl: projImg1,
-            githubUrl: "https://github.com/elisabetecosta/tindog-app",
-            pageUrl: "",
-        },
-        {
-            title: "Wok This Way",
-            description: "HTML, CSS, JavaScript, NodeJS, Express, MongoDB",
-            imgUrl: projImg2,
-            githubUrl: "https://github.com/elisabetecosta/wok-this-way",
-            pageUrl: "",
-        },
-        {
-            title: "Meowmery",
-            description: "React Native",
-            imgUrl: projImg3,
-            githubUrl: "",
-            pageUrl: "",
-        },
-        // {
-        //     title: "",
-        //     description: "",
-        //     imgUrl: projImg4
-        // },
-        // {
-        //     title: "",
-        //     description: "",
-        //     imgUrl: projImg5
-        // },
-        // {
-        //     title: "",
-        //     description: "",
-        //     imgUrl: projImg6
-        // },
-    ]
 
     return (
         <section className="projects" id="projects">
