@@ -1,3 +1,3 @@
 - Update project details and images
-- Implement phone validation, right now I am able to submit text inside the phone number field, see if other validations are needed
-- When portfolio is ready, change email (see if it works with my main email hotmail) on action and activate formsubmit (https://formsubmit.co/) 
+- Implement phone validation, right now I am able to submit text inside the phone number field, see if other validations are needed (https://github.com/Yazdun/react-fcc-forms/blob/main/src/Form.jsx)
+- When portfolio is ready, change email (see if it works with my main email hotmail) on action and activate formsubmit (https://formsubmit.co/)

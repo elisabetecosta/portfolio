@@ -1,7 +1,8 @@
 // Project Images: scale (380h), crop (380h, 518w), filters-decor-round corners (30 radius)
 import projImg1 from "./assets/img/wok.png"
-import projImg2 from "./assets/img/tindog.png"
-import projImg3 from "./assets/img/meowmory.png"
+import projImg2 from "./assets/img/ecommerce.png"
+import projImg3 from "./assets/img/drama-connect.png"
+import projImg4 from "./assets/img/meowmory.png"
 
 const projects = [
     {
@@ -13,7 +14,7 @@ const projects = [
     },
     {
         title: "Ecommerce Store + CMS",
-        description: "Next.js, TypeScript, TailwindCSS, Prisma, Planet Scale, Stripe",
+        description: "Next.js, TypeScript, TailwindCSS, Prisma, Stripe",
         imgUrl: projImg2,
         githubUrl: "https://github.com/elisabetecosta/ecommerce-store",
         pageUrl: "https://korean-store.vercel.app",
@@ -28,7 +29,7 @@ const projects = [
     {
         title: "Meowmory",
         description: "React Native, Expo",
-        imgUrl: projImg3,
+        imgUrl: projImg4,
         githubUrl: "https://github.com/elisabetecosta/meowmory",
         pageUrl: "",
     },
