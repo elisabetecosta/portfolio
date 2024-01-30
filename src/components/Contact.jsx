@@ -19,23 +19,56 @@ function Contact() {
 
     const onFormUpdate = (category, value) => setFormDetails({ ...formDetails, [category]: value })
 
+    const validateEmail = (email) => {
+        const regex = /\S+@\S+\.\S+/
+        return regex.test(String(email).toLowerCase())
+    }
+
+    const validatePhone = (phone) => {
+        const regex = /\d{7,}/
+        return regex.test(phone)
+    }
+
     const handleSubmit = async (e) => {
 
         e.preventDefault()
+
+        // Validations
+        if (
+            !formDetails.firstName ||
+            !formDetails.lastName ||
+            !formDetails.email ||
+            !formDetails.phone ||
+            !formDetails.message
+        ) {
+            setStatus({ success: false, message: "Please fill in all fields." })
+            return
+        }
+
+        if (!validateEmail(formDetails.email)) {
+            setStatus({ success: false, message: "Invalid email." })
+            return
+        }
+
+        if (!validatePhone(formDetails.phone)) {
+            setStatus({ success: false, message: "Invalid phone number." })
+            return
+        }
+
         setButtonText('Sending...')
 
         const form = e.target
 
         // Dynamically set the form action and method
-        form.action = "https://formsubmit.co/myemail@gmail.com"
+        form.action = `https://formsubmit.co/${process.env.EMAIL}`
         form.method = "POST"
 
         try {
 
             // Send the form data using fetch
             const response = await fetch(form.action, {
-              method: form.method,
-              body: new FormData(form),
+                method: form.method,
+                body: new FormData(form),
             })
 
             // Reset the form after submission
@@ -44,12 +77,12 @@ function Contact() {
 
             // Update status based on the response
             if (response.ok) {
-              setStatus({ success: true, message: "Message sent successfully." })
+                setStatus({ success: true, message: "Message sent successfully." })
             } else {
-              setStatus({
-                success: false,
-                message: "Something went wrong. Please, try again later.",
-              })
+                setStatus({
+                    success: false,
+                    message: "Something went wrong. Please, try again later.",
+                })
             }
         } catch (error) {
             console.error(error)
