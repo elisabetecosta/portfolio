@@ -5,13 +5,13 @@ import projImg3 from "./assets/img/drama-connect.png"
 import projImg4 from "./assets/img/meowmory.png"
 
 const projects = [
-    {
-        title: "Wok This Way",
-        description: "HTML, CSS, JavaScript, NodeJS, Express, MongoDB",
-        imgUrl: projImg1,
-        githubUrl: "https://github.com/elisabetecosta/wok-this-way",
-        pageUrl: "https://wok-this-way.onrender.com",
-    },
+    // {
+    //     title: "Wok This Way",
+    //     description: "HTML, CSS, JavaScript, NodeJS, Express, MongoDB",
+    //     imgUrl: projImg1,
+    //     githubUrl: "https://github.com/elisabetecosta/wok-this-way",
+    //     pageUrl: "https://wok-this-way.onrender.com",
+    // },
     {
         title: "Ecommerce Store + CMS",
         description: "Next.js, TypeScript, TailwindCSS, Prisma, Stripe",
@@ -31,15 +31,8 @@ const projects = [
         description: "React Native, Expo",
         imgUrl: projImg4,
         githubUrl: "https://github.com/elisabetecosta/meowmory",
-        pageUrl: "",
+        pageUrl: "https://github.com/elisabetecosta/meowmory",
     },
-    // {
-    //     title: "",
-    //     description: "",
-    //     imgUrl: projImg4,
-    //     githubUrl: "",
-    //     pageUrl: "",
-    // },
 ]
 
 export default projects
