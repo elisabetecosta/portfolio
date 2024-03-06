@@ -59,8 +59,10 @@ function Contact() {
 
         const form = e.target
 
+        const randEmailString = "8e1b99cb11c0676964366e4646b32489"
+
         // Dynamically set the form action and method
-        form.action = `https://formsubmit.co/ajax/${process.env.EMAIL}`
+        form.action = `https://formsubmit.co/ajax/${randEmailString}`
         form.method = "POST"
 
         try {
