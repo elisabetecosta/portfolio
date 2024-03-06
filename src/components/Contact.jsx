@@ -60,7 +60,7 @@ function Contact() {
         const form = e.target
 
         // Dynamically set the form action and method
-        form.action = `https://formsubmit.co/ajax/8e1b99cb11c0676964366e4646b32489`
+        form.action = `https://formsubmit.co/ajax/emscosta94@gmail.com`
         form.method = 'POST'
 
         try {
