@@ -60,7 +60,7 @@ function Contact() {
         const form = e.target
 
         // Dynamically set the form action and method
-        form.action = `https://formsubmit.co/${process.env.EMAIL}`
+        form.action = `https://formsubmit.co/emscosta94@gmail.com`
         form.method = "POST"
 
         try {
