@@ -60,7 +60,7 @@ function Contact() {
         const form = e.target
 
         // Dynamically set the form action and method
-        form.action = `https://formsubmit.co/ajax/emscosta94@gmail.com`
+        form.action = `https://formsubmit.co/emscosta94@gmail.com`
         form.method = 'POST'
 
         try {
@@ -68,10 +68,6 @@ function Contact() {
             // Send the form data using fetch
             const response = await fetch(form.action, {
                 method: form.method,
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
                 body: new FormData(form),
             })
 
