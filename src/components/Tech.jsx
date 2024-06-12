@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
 import backgroundImage from "../assets/img/color-sharp.png"
+import mysqlLogo from "../assets/img/mysql.svg"
 import "./Tech.css"
 
 function Tech() {
@@ -22,7 +23,7 @@ function Tech() {
                                 <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="NextJS Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" alt="Typescript Logo" />
-                                <img src="../assets/img/mysql.svg" alt="MySQL Logo" />
+                                <img src={mysqlLogo} alt="MySQL Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg" alt="Wordpress Logo" />
                                 <img src="https://cdn.worldvectorlogo.com/logos/react-native-1.svg" alt="React Native Logo" />
                             </div>
