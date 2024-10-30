@@ -7,6 +7,9 @@ import "./Footer.css"
 
 function Footer() {
 
+    const date = new Date()
+    let currentYear = date.getFullYear()
+
     return (
         <footer className="footer">
             <Container>
@@ -16,7 +19,7 @@ function Footer() {
                     </Col>
 
                     <Col xs={12} sm={5} md={4} className="text-center text-sm-end text-md-center">
-                        <p>&copy; 2023 by Elisabete Costa</p>
+                        <p>&copy; 2022-{currentYear} by Elisabete Costa</p>
                     </Col>
 
                     <Col xs={12} md={4} className="text-center text-sm-end">
